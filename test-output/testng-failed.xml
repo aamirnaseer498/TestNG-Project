@@ -5,7 +5,15 @@
     <classes>
       <class name="SecondTestCase">
         <methods>
+          <include name="afterClass"/>
+          <include name="beforeTest"/>
+          <include name="afterSuit"/>
+          <include name="beforeSuit"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
           <include name="searchCustomer"/>
+          <include name="afterTest"/>
         </methods>
       </class> <!-- SecondTestCase -->
     </classes>
