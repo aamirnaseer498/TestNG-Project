@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-11T12:52:49 PKT" name="All Test Suite" finished-at="2023-10-11T12:52:49 PKT" duration-ms="143">
+    <groups>
+    </groups>
+    <test started-at="2023-10-11T12:52:49 PKT" name="C:/Users/user/IdeaProjects/TestNG-Project" finished-at="2023-10-11T12:52:49 PKT" duration-ms="143">
+      <class name="FirstTestCase">
+        <test-method signature="setup()[pri:1, instance:FirstTestCase@55040f2f]" started-at="2023-10-11T12:52:49 PKT" name="setup" finished-at="2023-10-11T12:52:49 PKT" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login()[pri:2, instance:FirstTestCase@55040f2f]" started-at="2023-10-11T12:52:49 PKT" name="login" finished-at="2023-10-11T12:52:49 PKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="teardown()[pri:3, instance:FirstTestCase@55040f2f]" started-at="2023-10-11T12:52:49 PKT" name="teardown" finished-at="2023-10-11T12:52:49 PKT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- FirstTestCase -->
+      <class name="SecondTestCase">
+        <test-method signature="setup()[pri:1, instance:SecondTestCase@3bbc39f8]" started-at="2023-10-11T12:52:49 PKT" name="setup" finished-at="2023-10-11T12:52:49 PKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addCustomer()[pri:2, instance:SecondTestCase@3bbc39f8]" started-at="2023-10-11T12:52:49 PKT" name="addCustomer" finished-at="2023-10-11T12:52:49 PKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCustomer -->
+        <test-method signature="searchCustomer()[pri:3, instance:SecondTestCase@3bbc39f8]" started-at="2023-10-11T12:52:49 PKT" name="searchCustomer" finished-at="2023-10-11T12:52:49 PKT" duration-ms="16" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at SecondTestCase.searchCustomer(SecondTestCase.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchCustomer -->
+        <test-method signature="teardown()[pri:4, instance:SecondTestCase@3bbc39f8]" started-at="2023-10-11T12:52:49 PKT" name="teardown" finished-at="2023-10-11T12:52:49 PKT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- SecondTestCase -->
+    </test> <!-- C:/Users/user/IdeaProjects/TestNG-Project -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
