@@ -2,9 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/user/IdeaProjects/TestNG-Project">
+
+        <groups>
+            <run>
+                <include name="sanity"/>
+                <exclude name="regression"/>
+            </run>
+        </groups>
+
         <classes>
-            <class name="FirstTestCase"/>
-            <class name="SecondTestCase"/>
+            <class name="GroupingExample"/>
         </classes>
+
     </test>
 </suite>
