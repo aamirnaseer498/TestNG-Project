@@ -5,17 +5,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class AssertionsExample {
+public class ParallelExample2 {
 
     WebDriver chromeDriver;
 
-    @BeforeClass
+    @BeforeTest
     public void setupDriver(){
 
         chromeDriver= new ChromeDriver();
@@ -37,11 +35,11 @@ public class AssertionsExample {
     public void homePageTitleTest(){
 
         String pageTitle= chromeDriver.getTitle();
-        Assert.assertEquals(pageTitle,"OrangeHRM123","Page title is not matched");
+        Assert.assertEquals(pageTitle,"OrangeHRM","Page title is not matched");
 
     }
 
-    @AfterClass
+    @AfterTest
     public void tearDown(){
         chromeDriver.close();
     }
