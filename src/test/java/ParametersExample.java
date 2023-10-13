@@ -15,38 +15,38 @@ import java.time.Duration;
 
 public class ParametersExample {
 
-    WebDriver chromeDriver;
+    WebDriver webDriver;
 
     @BeforeClass
     @Parameters({"browser", "url"})
     public void setupDriver(String browser, String url) {
         if (browser.equalsIgnoreCase("chrome")) {
-            chromeDriver = new ChromeDriver();
-            chromeDriver.manage().window().maximize();
-            chromeDriver.get(url);
+            webDriver = new ChromeDriver();
+            webDriver.manage().window().maximize();
+            webDriver.get(url);
         } else if (browser.equalsIgnoreCase("firefox")) {
-            chromeDriver = new FirefoxDriver();
-            chromeDriver.manage().window().maximize();
-            chromeDriver.get(url);
+            webDriver = new FirefoxDriver();
+            webDriver.manage().window().maximize();
+            webDriver.get(url);
         }
     }
 
     @Test
     public void logoTest() {
-        WebDriverWait webDriverWait = new WebDriverWait(chromeDriver, Duration.ofSeconds(2000));
+        WebDriverWait webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(2000));
         WebElement logo = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='company-branding']")));
         Assert.assertTrue(logo.isDisplayed(), "Logo not displayed");
     }
 
     @Test
     public void homePageTitleTest() {
-        String pageTitle = chromeDriver.getTitle();
+        String pageTitle = webDriver.getTitle();
         Assert.assertEquals(pageTitle, "OrangeHRM", "Page title is not matched");
     }
 
     @AfterClass
     public void tearDown() {
-        chromeDriver.close();
+        webDriver.close();
     }
 
 }
