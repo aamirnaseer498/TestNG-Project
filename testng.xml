@@ -3,21 +3,15 @@
 
 <suite name="All Test Suite" parallel="tests" thread-count="2">
 
+    <listeners>
+        <listener class-name="CustomListener"/>
+    </listeners>
+
     <test name="Test1">
 
         <classes>
 
-            <class name="ParallelExample1"/>
-
-        </classes>
-
-    </test>
-
-    <test name="Test2">
-
-        <classes>
-
-            <class name="ParallelExample2"/>
+            <class name="ListenerTest"/>
 
         </classes>
 
